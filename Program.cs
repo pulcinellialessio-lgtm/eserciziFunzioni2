@@ -110,6 +110,7 @@
             {
                 return true;
             }
+            return false;
         }
         static double calcoloPrezzo(int prezzo)
         {
