@@ -104,17 +104,21 @@
             }
             return false;
         }
-        static bool categorie(string cat)
-        {
-            if (cat == "alimentari")
-            {
-                return true;
-            }
-            return false;
-        }
         static double calcoloPrezzo(int prezzo)
         {
-
+           float sconto = 0;
+            if (prezzo > 200)
+            {
+                sconto = prezzo * 30 / 100;
+            }
+            return sconto;
+        }
+        static double prezzoFinale(int prezzo)
+        {
+            double prezzoScontato = 0;
+            prezzoScontato = prezzo - calcoloPrezzo(prezzo);
+      
+            return prezzoScontato;
         }
         static void Main(string[] args)
         {
@@ -138,6 +142,12 @@
             {
                 Console.WriteLine("Accesso negato");
             }
+
+            Console.WriteLine("Dimmi il prezzo del prodotto");
+            int prezzo = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("il prezzo finale è " + prezzoFinale(prezzo));
+
         }
     }
 }
