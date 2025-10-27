@@ -128,7 +128,7 @@
             int m = differenza();
             Console.WriteLine(m);
 
-            Console.WriteLine("Dimmi in nome per l'accesso");
+            Console.WriteLine("Dimmi il nome per l'accesso");
             string nome = Console.ReadLine();
 
             Console.WriteLine("Dimmi la pasword per l'accesso di 4 numeri");
